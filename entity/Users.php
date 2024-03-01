@@ -18,7 +18,7 @@ class Users extends \yii\db\ActiveRecord implements IdentityInterface
 
     public static function tableName()
     {
-        return 'user';
+        return 'users';
     }
 
     public static function findIdentity($id)

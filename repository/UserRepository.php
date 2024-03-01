@@ -10,11 +10,10 @@ class UserRepository
         return Users::find()->where(['id' => $id])->one();
     }
 
-    public static function createUser($email, $password, $is_admin = false){
+    public static function createUser($email, $password){
         $user = new Users();
         $user->email = $email;
         $user->password = password_hash($password, PASSWORD_DEFAULT);
-        $user->is_admin = $is_admin;
         $user->save();
         return $user->id;
     }
