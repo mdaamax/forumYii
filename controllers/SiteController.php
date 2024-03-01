@@ -107,7 +107,7 @@ class SiteController extends Controller
         $model = new RegistrationForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             $userId = UserRepository::createUser(
-                $model -> login,
+                $model -> email,
                 $model -> password
             );
             Yii::$app ->user->login(Users::findIdentity($userId), 0);
