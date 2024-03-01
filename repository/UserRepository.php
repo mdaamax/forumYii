@@ -10,9 +10,9 @@ class UserRepository
         return Users::find()->where(['id' => $id])->one();
     }
 
-    public static function createUser($login, $password, $is_admin = false){
+    public static function createUser($email, $password, $is_admin = false){
         $user = new Users();
-        $user->login = $login;
+        $user->email = $email;
         $user->password = password_hash($password, PASSWORD_DEFAULT);
         $user->is_admin = $is_admin;
         $user->save();
@@ -30,9 +30,7 @@ class UserRepository
         $user->save();
         return $user->id;
     }
-
-    public static function getUserByLogin($login){
-        return Users::find()-> where(['login' => $login]) -> one();
+    public static function getUserByEmail($email){
+        return Users::find()->where(['email' => $email])->one();
     }
-
 }

@@ -2,20 +2,19 @@
 
 namespace app\models;
 
+use app\entity\Users;
 use app\repository\UserRepository;
 use Yii;
 use yii\base\Model;
-use yii\db\ActiveRecord;
 
 /**
  * LoginForm is the model behind the login form.
  *
- * @property-read User|null $user
  *
  */
 class LoginForm extends Model
 {
-    public $login;
+    public $email;
     public $password;
     public $rememberMe = true;
 
@@ -29,11 +28,12 @@ class LoginForm extends Model
     {
         return [
             // username and password are both required
-            [['login', 'password'], 'required'],
+            [['email', 'password'], 'required'],
             // rememberMe must be a boolean value
             ['rememberMe', 'boolean'],
             // password is validated by validatePassword()
             ['password', 'validatePassword'],
+            ['email','email']
         ];
     }
 
@@ -70,12 +70,12 @@ class LoginForm extends Model
     /**
      * Finds user by [[username]]
      *
-     * @return Users|array|yii|db|ActiveRecord|null
+     * @return Users|array|\yii\db\ActiveRecord|null
      */
     public function getUser()
     {
         if ($this->_user === false) {
-            $this->_user = UserRepository::getUserByLogin($this ->login);
+            $this->_user = UserRepository::getUserByEmail($this->email);
         }
 
         return $this->_user;

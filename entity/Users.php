@@ -4,17 +4,21 @@ namespace app\entity;
 
 use app\repository\UserRepository;
 use yii\web\IdentityInterface;
+
+
 /**
- * @property int id Идентификатор
- * @property string login Логин
- * @property string password Пароль
- * @property boolean is_admin Флаг админа
+ *@property int id Идентификатор;
+ *@property string email Email;
+ * @property string password Пароль;
+ * @property boolean is_admin флаг админа;
  */
+
 class Users extends \yii\db\ActiveRecord implements IdentityInterface
 {
-    public function getRequests()
+
+    public static function tableName()
     {
-        return $this->hasMany(Request::class, ['user_id' => 'id']);
+        return 'user';
     }
 
     public static function findIdentity($id)
@@ -29,14 +33,8 @@ class Users extends \yii\db\ActiveRecord implements IdentityInterface
 
     public function getId()
     {
-        return $this ->id;
+        return $this->id;
     }
-
-    public function validatePassword($password)
-    {
-        return password_verify($password, $this -> password);
-    }
-
 
     public function getAuthKey()
     {
@@ -46,6 +44,9 @@ class Users extends \yii\db\ActiveRecord implements IdentityInterface
     public function validateAuthKey($authKey)
     {
 
-
+    }
+    public function validatePassword($password)
+    {
+        return password_verify($password, $this->password);
     }
 }

@@ -6,7 +6,7 @@
 
 use yii\bootstrap4\ActiveForm;
 use yii\bootstrap4\Html;
-
+//var_dump(password_hash('admin',PASSWORD_DEFAULT));
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 
-        <?= $form->field($model, 'login')->textInput(['autofocus' => true]) ?>
+        <?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>
 
         <?= $form->field($model, 'password')->passwordInput() ?>
 
@@ -42,5 +42,55 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php ActiveForm::end(); ?>
 
-
-</div>
+    <div class="offset-lg-1" style="color:#999;">
+        You may login with <strong>admin/admin</strong> or <strong>demo/demo</strong>.<br>
+        To modify the username/password, please check out the code <code>app\models\User::$users</code>.
+    </div>
+<!--</div>-->
+<!--<!doctype html>-->
+<!--<html lang="ru" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"-->
+<!--      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">-->
+<!--<head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    <title>BEERMAX</title>-->
+<!--    <link rel="stylesheet" href="auto_form.css">-->
+<!--</head>-->
+<!--<body>-->
+<!---->
+<!---->
+<!---->
+<!---->
+<!--<div class="wrapper fadeInDown">-->
+<!--    <div id="formContent">-->
+<!---->
+<!--        <h2 class="active"> Авторизация </h2>-->
+<!---->
+<!---->
+<!---->
+<!--        <div class="fadeIn first">-->
+<!--            <img src="https://cdn-icons-png.flaticon.com/512/931/931949.png"  id="icon" alt="User Icon"/>-->
+<!--        </div>-->
+<!---->
+<!--        <form method="post">-->
+<!--            <input type="text" name="username"  class="form-control" id="exampleFormControlInput1" placeholder="login">-->
+<!--            <input type="password" name="password" class="form-control" id="exampleFormControlInput1" placeholder="password">-->
+<!---->
+<!--            <input type="submit" class="fadeIn fourth" value="Войти">-->
+<!--            <br>-->
+<!--            <b style="color: crimson">-->
+<!--            </b>-->
+<!--        </form>-->
+<!---->
+<!---->
+<!--        <div id="formFooter">-->
+<!--            <a class="underlineHover" href="register_form.php">Регистрация</a>-->
+<!--        </div>-->
+<!---->
+<!--    </div>-->
+<!--</div>-->
+<!---->
+<!---->
+<!---->
+<!--</body>-->
+<!--</html>-->

@@ -1,34 +1,29 @@
 <?php
 
 namespace app\models;
+
 use app\repository\UserRepository;
 
 class RegistrationForm extends \yii\base\Model
 {
-    public $login;
     public $password;
+    public $email;
     public $passwordRepeat;
-
-
-
     public function rules()
     {
         return [
-          [['login','password','passwordRepeat'] , 'required',],
-          ['passwordRepeat','compare','compareAttribute' => 'password'],
-          ['login','validateLogin']
+            [['email','password','passwordRepeat'], 'required'],
+            ['email', 'email'],
+            ['passwordRepeat', 'compare', 'compareAttribute' => 'password']
         ];
     }
-
-    public function validateLogin($attribute, $params)
+    public function validateEmail($attribute, $params)
     {
         if (!$this->hasErrors()) {
-            $user = UserRepository::getUserByLogin($this -> login);
-
+            $user = UserRepository::getUserByEmail($this->email);
             if ($user) {
-                $this->addError($attribute, 'Пользователь существувет');
+                $this->addError($attribute, 'Incorrect username or password.');
             }
         }
     }
-
 }
