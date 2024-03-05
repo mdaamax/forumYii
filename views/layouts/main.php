@@ -61,7 +61,7 @@ AppAsset::register($this);
         ?>
     </header>
 
-
+<?= $content ?>
     <footer class="footer mt-auto py-3 text-muted">
 
     </footer>
