@@ -22,8 +22,15 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/site.css',
         'css/auto_form.css',
+        'css/header.css',
+        'css/product_style.css',
     ];
     public $js = [
+        'css/script.js',
+        'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js',
+        'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js',
+        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js',
+
     ];
     public $depends = [
         'yii\web\YiiAsset',

@@ -3,13 +3,13 @@
 use yii\helpers\Html;
 
 /** @var yii\web\View $this */
-/** @var app\entity\Subsections $model */
+/** @var app\entity\DirCountries $model */
 
-$this->title = 'Create Subsections';
-$this->params['breadcrumbs'][] = ['label' => 'Subsections', 'url' => ['index']];
+$this->title = 'Create Dir Countries';
+$this->params['breadcrumbs'][] = ['label' => 'Dir Countries', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="subsections-create">
+<div class="dir-countries-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

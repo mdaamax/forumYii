@@ -15,9 +15,10 @@ class m240305_160134_tours extends Migration
         $this -> createTable('tours',[
             'id' => $this -> primaryKey(),
             'price' => $this ->integer() -> notNull(),
-            'human_count' => $this ->integer(),
+            'human_count' => $this ->integer()-> defaultValue(1)-> notNull(),
             'title' => $this ->string(100) ->notNull(),
             'description' => $this -> text() ->null(),
+            'short_description' => $this -> string(255) ->null(),
             'hotel_id' => $this -> integer() -> notNull(),
         ]);
 
@@ -46,6 +47,7 @@ class m240305_160134_tours extends Migration
         $this -> createTable('dir_countries',[
             'id' => $this -> primaryKey(),
             'name' => $this ->string(100) ->notNull(),
+            'description' => $this -> text() ->null(),
         ]);
         $this -> addForeignKey(
           'hotel_to_country_fk',
@@ -65,14 +67,44 @@ class m240305_160134_tours extends Migration
             'CASCADE',
             'CASCADE'
         );
+        $this -> addForeignKey(
+            'hotel_to_tours_fk',
+            'tours',
+            'hotel_id',
+            'hotel',
+            'id',
+            'CASCADE',
+            'CASCADE'
+        );
+        $this -> addForeignKey(
+            'basket_to_tours_fk',
+            'basket_to_tours',
+            'basket_id',
+            'basket',
+            'id',
+            'CASCADE',
+            'CASCADE'
+        );
+        $this -> addForeignKey(
+            'tours_to_basket_fk',
+            'basket_to_tours',
+            'tour_id',
+            'tours',
+            'id',
+            'CASCADE',
+            'CASCADE'
+        );
     }
 
     /**
      * {@inheritdoc}
      */
     public function safeDown()
-    {
+    {   $this -> dropTable('basket_to_tours');
+        $this -> dropTable('basket');
         $this -> dropTable('tours');
+        $this -> dropTable('hotel');
+        $this -> dropTable('dir_country');
         echo 'УДАЛЕНО';
     }
 

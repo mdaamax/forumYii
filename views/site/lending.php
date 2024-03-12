@@ -1,3 +1,10 @@
+<?php
+
+use app\assets\AppAsset;
+
+AppAsset::register($this);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,10 +15,10 @@
     <title>Tourly - Travel agancy</title>
 
 
-    <link rel="shortcut icon" href="/web/css/img/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/css/img/favicon.svg" type="image/svg+xml">
 
     <!--
-       css
+css
     -->
     <link rel="stylesheet" href="header.css">
 
@@ -51,7 +58,7 @@
             </a>
 
             <a href="#" class="logo">
-                <img src="/web/css/img/logo.svg" alt="Tourly logo">
+                <img src="/css/img/logo.svg" alt="Tourly logo">
             </a>
 
             <div class="header-btn-group">
@@ -79,7 +86,7 @@
                 <div class="navbar-top">
 
                     <a href="#" class="logo">
-                        <img src="/web/css/img/logo-blue.svg" alt="Tourly logo">
+                        <img src="/css/img/logo-blue.svg" alt="Tourly logo">
                     </a>
 
                     <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
@@ -139,8 +146,8 @@
                 <h2 class="h1 hero-title">Места для вдохновения</h2>
 
                 <p class="hero-text">
-                    Подборки путешествий для вашего wish-листа
-                </p>
+Подборки путешествий для вашего wish-листа
+</p>
 
                 <div class="btn-group">
                     <button class="btn btn-primary">Learn more</button>
@@ -171,7 +178,7 @@
                 <h2 class="h2 section-title">СТРАНЫ</h2>
 
                 <p class="section-text">
-                    Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque
+Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque
                     laudantium.
                     Sit ornare
                     mollitia tenetur, aptent.
@@ -183,7 +190,7 @@
                         <div class="popular-card">
 
                             <figure class="card-img">
-                                <img src="/web/css/img/popular-1.jpg" alt="San miguel, italy" loading="lazy">
+                                <img src="/css/img/popular-1.jpg" alt="San miguel, italy" loading="lazy">
                             </figure>
 
                             <div class="card-content">
@@ -198,8 +205,8 @@
                                 </h3>
 
                                 <p class="card-text">
-                                    италия круто
-                                </p>
+италия круто
+</p>
 
                             </div>
 
@@ -210,7 +217,7 @@
                         <div class="popular-card">
 
                             <figure class="card-img">
-                                <img src="/web/css/img/popular-2.jpg" alt="Burj khalifa, dubai" loading="lazy">
+                                <img src="/css/img/popular-2.jpg" alt="Burj khalifa, dubai" loading="lazy">
                             </figure>
 
                             <div class="card-content">
@@ -225,7 +232,7 @@
                                 </h3>
 
                                 <p class="card-text">
-                                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
                                 </p>
 
                             </div>
@@ -237,7 +244,7 @@
                         <div class="popular-card">
 
                             <figure class="card-img">
-                                <img src="/web/css/img/popular-3.jpg" alt="Kyoto temple, japan" loading="lazy">
+                                <img src="/css/img/popular-3.jpg" alt="Kyoto temple, japan" loading="lazy">
                             </figure>
 
                             <div class="card-content">
@@ -252,7 +259,7 @@
                                 </h3>
 
                                 <p class="card-text">
-                                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
                                 </p>
 
                             </div>
@@ -280,7 +287,7 @@
                 <h2 class="h2 section-title">ТУРЫ</h2>
 
                 <p class="section-text">
-                    Это настоящий круиз на парусной яхте с максимально разнообразной программой:
+Это настоящий круиз на парусной яхте с максимально разнообразной программой:
                     яхтинг и чил, трекинг, катание на сапах, много игрушек на борту (гамаки, квадрокоптер и прочее)
                 </p>
 
@@ -290,7 +297,7 @@
                         <div class="package-card">
 
                             <figure class="card-banner">
-                                <img src="/web/css/img/packege-1.jpg" alt="Experience The Great Holiday On Beach"
+                                <img src="/css/img/packege-1.jpg" alt="Experience The Great Holiday On Beach"
                                      loading="lazy">
                             </figure>
 
@@ -299,7 +306,7 @@
                                 <h3 class="h3 card-title">Летний отдых на реке Оксолотан</h3>
 
                                 <p class="card-text">
-                                    Это настоящий круиз на парусной яхте с максимально разнообразной программой:
+Это настоящий круиз на парусной яхте с максимально разнообразной программой:
                                     яхтинг и чил, трекинг, катание на сапах, много игрушек на борту (гамаки, квадрокоптер и прочее)
                                 </p>
 
@@ -342,8 +349,8 @@
                                 </div>
 
                                 <p class="price">
-                                    7150 ₽
-                                    <span>/ на человека</span>
+7150 ₽
+<span>/ на человека</span>
                                 </p>
 
                                 <button class="btn btn-secondary">Купить</button>
@@ -357,7 +364,7 @@
                         <div class="package-card">
 
                             <figure class="card-banner">
-                                <img src="/web/css/img/packege-2.jpg" alt="Summer Holiday To The Oxolotan River"
+                                <img src="/css/img/packege-2.jpg" alt="Summer Holiday To The Oxolotan River"
                                      loading="lazy">
                             </figure>
 
@@ -366,7 +373,7 @@
                                 <h3 class="h3 card-title">Летний отдых на реке Оксолотан</h3>
 
                                 <p class="card-text">
-                                    Это настоящий круиз на парусной яхте с максимально разнообразной программой:
+Это настоящий круиз на парусной яхте с максимально разнообразной программой:
                                     яхтинг и чил, трекинг, катание на сапах, много игрушек на борту (гамаки, квадрокоптер и прочее)
                                 </p>
 
@@ -405,8 +412,8 @@
 
 
                                 <p class="price">
-                                    7150 ₽
-                                    <span>/ на человека</span>
+7150 ₽
+<span>/ на человека</span>
                                 </p>
 
                                 <button class="btn btn-secondary">Купить</button>
@@ -420,7 +427,7 @@
                         <div class="package-card">
 
                             <figure class="card-banner">
-                                <img src="/web/css/img/packege-3.jpg" alt="Santorini Island's Weekend Vacation"
+                                <img src="/css/img/packege-3.jpg" alt="Santorini Island's Weekend Vacation"
                                      loading="lazy">
                             </figure>
 
@@ -429,7 +436,7 @@
                                 <h3 class="h3 card-title">Летний отдых на реке Оксолотан</h3>
 
                                 <p class="card-text">
-                                    Это настоящий круиз на парусной яхте с максимально разнообразной программой:
+Это настоящий круиз на парусной яхте с максимально разнообразной программой:
                                     яхтинг и чил, трекинг, катание на сапах, много игрушек на борту (гамаки, квадрокоптер и прочее)
                                 </p>
 
@@ -468,8 +475,8 @@
 
 
                                 <p class="price">
-                                    7150 ₽
-                                    <span>/ на человека</span>
+7150 ₽
+<span>/ на человека</span>
                                 </p>
 
                                 <button class="btn btn-secondary">Купить</button>
@@ -495,7 +502,7 @@
                 <h2 class="h2 section-title">ОТЕли</h2>
 
                 <p class="section-text">
-                    Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque
+Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque
                     laudantium.
                     Sit ornare
                     mollitia tenetur, aptent.
@@ -507,7 +514,7 @@
                         <div class="popular-card">
 
                             <figure class="card-img">
-                                <img src="/web/css/img/popular-1.jpg" alt="San miguel, italy" loading="lazy">
+                                <img src="/css/img/popular-1.jpg" alt="San miguel, italy" loading="lazy">
                             </figure>
 
                             <div class="card-content">
@@ -522,8 +529,8 @@
                                 </h3>
 
                                 <p class="card-text">
-                                    италия круто
-                                </p>
+италия круто
+</p>
 
                             </div>
 
@@ -534,7 +541,7 @@
                         <div class="popular-card">
 
                             <figure class="card-img">
-                                <img src="/web/css/img/popular-2.jpg" alt="Burj khalifa, dubai" loading="lazy">
+                                <img src="/css/img/popular-2.jpg" alt="Burj khalifa, dubai" loading="lazy">
                             </figure>
 
                             <div class="card-content">
@@ -549,7 +556,7 @@
                                 </h3>
 
                                 <p class="card-text">
-                                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
                                 </p>
 
                             </div>
@@ -561,7 +568,7 @@
                         <div class="popular-card">
 
                             <figure class="card-img">
-                                <img src="/web/css/img/popular-3.jpg" alt="Kyoto temple, japan" loading="lazy">
+                                <img src="/css/img/popular-3.jpg" alt="Kyoto temple, japan" loading="lazy">
                             </figure>
 
                             <div class="card-content">
@@ -576,7 +583,7 @@
                                 </h3>
 
                                 <p class="card-text">
-                                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
                                 </p>
 
                             </div>
@@ -604,38 +611,38 @@
                 <h2 class="h2 section-title">Фотографии из путешествий</h2>
 
                 <p class="section-text">
-                    Ваши фотки
-                </p>
+Ваши фотки
+</p>
 
                 <ul class="gallery-list">
 
                     <li class="gallery-item">
                         <figure class="gallery-image">
-                            <img src="/web/css/img/gallery-1.jpg" alt="Gallery image">
+                            <img src="/css/img/gallery-1.jpg" alt="Gallery image">
                         </figure>
                     </li>
 
                     <li class="gallery-item">
                         <figure class="gallery-image">
-                            <img src="/web/css/img/gallery-2.jpg" alt="Gallery image">
+                            <img src="/css/img/gallery-2.jpg" alt="Gallery image">
                         </figure>
                     </li>
 
                     <li class="gallery-item">
                         <figure class="gallery-image">
-                            <img src="/web/css/img/gallery-3.jpg" alt="Gallery image">
+                            <img src="/css/img/gallery-3.jpg" alt="Gallery image">
                         </figure>
                     </li>
 
                     <li class="gallery-item">
                         <figure class="gallery-image">
-                            <img src="/web/css/img/gallery-4.jpg" alt="Gallery image">
+                            <img src="/css/img/gallery-4.jpg" alt="Gallery image">
                         </figure>
                     </li>
 
                     <li class="gallery-item">
                         <figure class="gallery-image">
-                            <img src="/web/css/img/gallery-5.jpg" alt="Gallery image">
+                            <img src="/css/img/gallery-5.jpg" alt="Gallery image">
                         </figure>
                     </li>
 
@@ -658,8 +665,8 @@
                     <h2 class="h2 section-title">ГОТОВЫ К НЕЗАБЫВАЕМОМУ ПУТЕШЕСТВИЮ. НЕ ЗАБЫВАЙТЕ О НАС</h2>
 
                     <p class="section-text">
-                        Авторские туры — новый формат насыщенных путешествий
-                    </p>
+Авторские туры — новый формат насыщенных путешествий
+</p>
                 </div>
 
                 <button class="btn btn-secondary">Наши Контакты!</button>
@@ -683,11 +690,11 @@
             <div class="footer-brand">
 
                 <a href="#" class="logo">
-                    <img src="/web/css/img/logo.svg" alt="Tourly logo">
+                    <img src="/css/img/logo.svg" alt="Tourly logo">
                 </a>
 
                 <p class="footer-text">
-                    Urna ratione ante harum provident, eleifend, vulputate molestiae proin fringilla, praesentium magna
+Urna ratione ante harum provident, eleifend, vulputate molestiae proin fringilla, praesentium magna
                     conubia
                     at
                     perferendis, pretium, aenean aut ultrices.
@@ -700,7 +707,7 @@
                 <h4 class="contact-title">Contact Us</h4>
 
                 <p class="contact-text">
-                    Feel free to contact and reach us !!
+Feel free to contact and reach us !!
                 </p>
 
                 <ul>
@@ -730,7 +737,7 @@
             <div class="footer-form">
 
                 <p class="form-text">
-                    Подпишитесь на нашу рассылку для получения дополнительных обновлений и новостей!!
+Подпишитесь на нашу рассылку для получения дополнительных обновлений и новостей!!
                 </p>
 
                 <form action="" class="form-wrapper">
@@ -749,7 +756,7 @@
 
             <p class="copyright">
                 &copy; 2024 <a href="">Все права защищены</a>. или нет
-            </p>
+</p>
 
 
         </div>

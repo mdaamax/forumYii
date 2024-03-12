@@ -8,12 +8,16 @@ class RegistrationForm extends \yii\base\Model
 {
     public $password;
     public $email;
+    public $lastname;
+    public $firstname;
+    public $patronymic;
     public $passwordRepeat;
     public function rules()
     {
         return [
-            [['email','password','passwordRepeat'], 'required'],
+            [['email','lastname','firstname','password','passwordRepeat'], 'required'],
             ['email', 'email'],
+            ['patronymic', 'string'],
             ['passwordRepeat', 'compare', 'compareAttribute' => 'password']
         ];
     }

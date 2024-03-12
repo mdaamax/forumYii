@@ -215,6 +215,7 @@ body { background: var(--white); }
     width: 100%;
     padding-top: 61px;
     z-index: 4;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .header-top {

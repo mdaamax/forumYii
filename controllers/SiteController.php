@@ -67,6 +67,10 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
+    public function actionLending()
+    {
+        return $this->renderAjax('lending');
+    }
 
     /**
      * Login action.
@@ -108,7 +112,10 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             $userId = UserRepository::createUser(
                 $model -> email,
-                $model -> password
+                $model -> password,
+                $model -> firstname,
+                $model -> lastname,
+                $model -> patronymic
             );
             Yii::$app ->user->login(Users::findIdentity($userId), 0);
             return $this->goBack();

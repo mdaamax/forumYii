@@ -2,16 +2,16 @@
 
 namespace app\controllers;
 
-use app\entity\Subsections;
+use app\entity\DirCountries;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * SubsectionsController implements the CRUD actions for Subsections model.
+ * CountriesController implements the CRUD actions for DirCountries model.
  */
-class SubsectionsController extends Controller
+class CountriesController extends Controller
 {
     /**
      * @inheritDoc
@@ -32,14 +32,14 @@ class SubsectionsController extends Controller
     }
 
     /**
-     * Lists all Subsections models.
+     * Lists all DirCountries models.
      *
      * @return string
      */
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => Subsections::find(),
+            'query' => DirCountries::find(),
             /*
             'pagination' => [
                 'pageSize' => 50
@@ -58,7 +58,7 @@ class SubsectionsController extends Controller
     }
 
     /**
-     * Displays a single Subsections model.
+     * Displays a single DirCountries model.
      * @param int $id ID
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
@@ -71,13 +71,13 @@ class SubsectionsController extends Controller
     }
 
     /**
-     * Creates a new Subsections model.
+     * Creates a new DirCountries model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
     public function actionCreate()
     {
-        $model = new Subsections();
+        $model = new DirCountries();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -93,7 +93,7 @@ class SubsectionsController extends Controller
     }
 
     /**
-     * Updates an existing Subsections model.
+     * Updates an existing DirCountries model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id ID
      * @return string|\yii\web\Response
@@ -113,7 +113,7 @@ class SubsectionsController extends Controller
     }
 
     /**
-     * Deletes an existing Subsections model.
+     * Deletes an existing DirCountries model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id ID
      * @return \yii\web\Response
@@ -127,15 +127,15 @@ class SubsectionsController extends Controller
     }
 
     /**
-     * Finds the Subsections model based on its primary key value.
+     * Finds the DirCountries model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id ID
-     * @return Subsections the loaded model
+     * @return DirCountries the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Subsections::findOne(['id' => $id])) !== null) {
+        if (($model = DirCountries::findOne(['id' => $id])) !== null) {
             return $model;
         }
 

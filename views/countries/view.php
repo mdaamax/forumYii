@@ -4,14 +4,14 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /** @var yii\web\View $this */
-/** @var app\entity\Subsections $model */
+/** @var app\entity\DirCountries $model */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Subsections', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Dir Countries', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="subsections-view">
+<div class="dir-countries-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'name',
-            'sections_id',
+            'description:ntext',
         ],
     ]) ?>
 
