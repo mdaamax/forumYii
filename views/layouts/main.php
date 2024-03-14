@@ -45,106 +45,131 @@ if (Yii::$app->user->isGuest) {
         . '</li>';
 }
 $nav = Nav::widget([
-    'options' => ['class' => 'navbar-list'],
+    'options' => ['class' => 'navbar-nav'],
     'items' => $items
 ]);
 ?>
 
 <header class="header" data-header>
-
-    <div class="overlay" data-overlay></div>
-
-    <div class="header-top">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <a href="tel:+7(800)555-35-35" class="helpline-box">
-
-                <div class="icon-box">
-                    <ion-icon name="call-outline"></ion-icon>
-                </div>
-
-                <div class="wrapper">
-                    <p class="helpline-title">Позвоните нам :</p>
-
-                    <p class="helpline-number">+7(800)555-35-35</p>
-                </div>
-
+            <a class="navbar-brand" href="">
+                <strong><span>ТУры</span></strong>
             </a>
 
-            <a href="#" class="logo">
-                <img src="/css/img/logo.svg" alt="Tourly logo">
-            </a>
+            <div class="d-lg-none">
+                <a href="" class="bi-person custom-icon me-3"></a>
 
-            <div class="header-btn-group">
-
-
-                <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
-                    <ion-icon name="menu-outline"></ion-icon>
-                </button>
-
+                <a href="" class="bi-bag custom-icon"></a>
             </div>
 
-        </div>
-    </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link active" href="index.html">Home</a>-->
+<!--                    </li>-->
+<!---->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="about.html">Story</a>-->
+<!--                    </li>-->
+<!---->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="products.html">Products</a>-->
+<!--                    </li>-->
+<!---->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="faq.html">FAQs</a>-->
+<!--                    </li>-->
+<!---->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="contact.html">Contact</a>-->
+<!--                    </li>-->
+                    <?php echo $nav; ?>
+                </ul>
 
-    <div class="header-bottom">
-        <div class="container">
+                <div class="d-none d-lg-block">
+                    <a href="" class="bi-person custom-icon me-3"></a>
 
-            <ul class="social-list">
-
-
-            </ul>
-
-            <nav class="navbar" data-navbar>
-
-                <div class="navbar-top">
-
-                    <a href="#" class="logo">
-                        <img src="/css/img/logo-blue.svg" alt="Tourly logo">
-                    </a>
-
-                    <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
-                        <ion-icon name="close-outline"></ion-icon>
-                    </button>
-
+                    <a href="" class="bi-bag custom-icon"></a>
                 </div>
-                <?php echo $nav; ?>
-                <!--                    <ul class="navbar-list ">-->
-                <!---->
-                <!--                        <li>-->
-                <!--                            <a href="#home" class="navbar-link" data-nav-link>Главная</a>-->
-                <!--                        </li>-->
-                <!---->
-                <!--                        <li>-->
-                <!--                            <a href="#" class="navbar-link" data-nav-link>О нас</a>-->
-                <!--                        </li>-->
-                <!---->
-                <!--                        <li>-->
-                <!--                            <a href="#destination" class="navbar-link" data-nav-link>Популярное</a>-->
-                <!--                        </li>-->
-                <!---->
-                <!--                        <li>-->
-                <!--                            <a href="#package" class="navbar-link" data-nav-link>Подборки</a>-->
-                <!--                        </li>-->
-                <!---->
-                <!--                        <li>-->
-                <!--                            <a href="#gallery" class="navbar-link" data-nav-link>Галлерея</a>-->
-                <!--                        </li>-->
-                <!---->
-                <!--                        <li>-->
-                <!--                            <a href="#contact" class="navbar-link" data-nav-link>Контакты</a>-->
-                <!--                        </li>-->
-                <!---->
-                <!--                    </ul>-->
-
-            </nav>
-
-            <button class="btn btn-primary">Купить</button>
-
+            </div>
         </div>
-    </div>
-
+    </nav>
 </header>
+<!--<header class="header" data-header>-->
+<!---->
+<!--    <div class="overlay" data-overlay></div>-->
+<!---->
+<!--    <div class="header-top">-->
+<!--        <div class="container">-->
+<!---->
+<!--            <a href="tel:+7(800)555-35-35" class="helpline-box">-->
+<!---->
+<!--                <div class="icon-box">-->
+<!--                    <ion-icon name="call-outline"></ion-icon>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="wrapper">-->
+<!--                    <p class="helpline-title">Позвоните нам :</p>-->
+<!---->
+<!--                    <p class="helpline-number">+7(800)555-35-35</p>-->
+<!--                </div>-->
+<!---->
+<!--            </a>-->
+<!---->
+<!--            <a href="#" class="logo">-->
+<!--                <img src="/css/img/logo.svg" alt="Tourly logo">-->
+<!--            </a>-->
+<!---->
+<!--            <div class="header-btn-group">-->
+<!---->
+<!---->
+<!--                <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>-->
+<!--                    <ion-icon name="menu-outline"></ion-icon>-->
+<!--                </button>-->
+<!---->
+<!--            </div>-->
+<!---->
+<!--        </div>-->
+<!--    </div>-->
+<!---->
+<!--    <div class="header-bottom">-->
+<!--        <div class="container">-->
+<!---->
+<!--            <ul class="social-list">-->
+<!---->
+<!---->
+<!--            </ul>-->
+<!---->
+<!--            <nav class="navbar" data-navbar>-->
+<!---->
+<!--                <div class="navbar-top">-->
+<!---->
+<!--                    <a href="#" class="logo">-->
+<!--                        <img src="/css/img/logo-blue.svg" alt="Tourly logo">-->
+<!--                    </a>-->
+<!---->
+<!--                    <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>-->
+<!--                        <ion-icon name="close-outline"></ion-icon>-->
+<!--                    </button>-->
+<!---->
+<!--                </div>-->
+<!--                --><?php //echo $nav; ?>
+<!--                -->
+<!---->
+<!--            </nav>-->
+<!---->
+<!--            <button class="btn btn-primary">Купить</button>-->
+<!---->
+<!--        </div>-->
+<!--    </div>-->
+<!---->
+<!--</header>-->
 <main class="container" style="margin-top:15vh " >
     <article>
 

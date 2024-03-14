@@ -9,11 +9,14 @@
 
 
     <link rel="shortcut icon" href="/web/css/img/favicon.svg" type="image/svg+xml">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!--
        css
     -->
     <link rel="stylesheet" href="header.css">
+<!--    <link rel="stylesheet" href="slick.css">-->
+    <link rel="stylesheet" href="top.css">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,100 +33,203 @@
 -->
 
 <header class="header" data-header>
-
-    <div class="overlay" data-overlay></div>
-
-    <div class="header-top">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <a href="tel:+7(800)555-35-35" class="helpline-box">
-
-                <div class="icon-box">
-                    <ion-icon name="call-outline"></ion-icon>
-                </div>
-
-                <div class="wrapper">
-                    <p class="helpline-title">Позвоните нам :</p>
-
-                    <p class="helpline-number">+7(800)555-35-35</p>
-                </div>
-
+            <a class="navbar-brand" href="index.html">
+                <strong><span>ТУры</span></strong>
             </a>
 
-            <a href="#" class="logo">
-                <img src="/web/css/img/logo.svg" alt="Tourly logo">
-            </a>
+            <div class="d-lg-none">
+                <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
 
-            <div class="header-btn-group">
-
-
-                <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
-                    <ion-icon name="menu-outline"></ion-icon>
-                </button>
-
+                <a href="product-detail.html" class="bi-bag custom-icon"></a>
             </div>
 
-        </div>
-    </div>
-
-    <div class="header-bottom">
-        <div class="container">
-
-            <ul class="social-list">
-
-
-            </ul>
-
-            <nav class="navbar" data-navbar>
-
-                <div class="navbar-top">
-
-                    <a href="#" class="logo">
-                        <img src="/web/css/img/logo-blue.svg" alt="Tourly logo">
-                    </a>
-
-                    <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
-                        <ion-icon name="close-outline"></ion-icon>
-                    </button>
-
-                </div>
-
-                <ul class="navbar-list">
-
-                    <li>
-                        <a href="#home" class="navbar-link" data-nav-link>Главная</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
                     </li>
 
-                    <li>
-                        <a href="#" class="navbar-link" data-nav-link>О нас</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Story</a>
                     </li>
 
-                    <li>
-                        <a href="#destination" class="navbar-link" data-nav-link>Популярное</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
                     </li>
 
-                    <li>
-                        <a href="#package" class="navbar-link" data-nav-link>Подборки</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQs</a>
                     </li>
 
-                    <li>
-                        <a href="#gallery" class="navbar-link" data-nav-link>Галлерея</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
-
-                    <li>
-                        <a href="#contact" class="navbar-link" data-nav-link>Контакты</a>
-                    </li>
-
                 </ul>
 
-            </nav>
+                <div class="d-none d-lg-block">
+                    <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
 
-            <button class="btn btn-primary">Купить</button>
-
+                    <a href="product-detail.html" class="bi-bag custom-icon"></a>
+                </div>
+            </div>
         </div>
-    </div>
-
+    </nav>
 </header>
+<!--    <div class="overlay" data-overlay></div>-->
+
+<!--    <div class="header-top">-->
+<!--        <div class="container">-->
+
+<!--            <a href="tel:+7(800)555-35-35" class="helpline-box">-->
+
+<!--                <div class="icon-box">-->
+<!--                    <ion-icon name="call-outline"></ion-icon>-->
+<!--                </div>-->
+
+<!--                <div class="wrapper">-->
+<!--                    <p class="helpline-title">Позвоните нам :</p>-->
+
+<!--                    <p class="helpline-number">+7(800)555-35-35</p>-->
+<!--                </div>-->
+
+<!--            </a>-->
+
+<!--            <a href="#" class="logo">-->
+<!--                <img src="/web/css/img/logo.svg" alt="Tourly logo">-->
+<!--            </a>-->
+
+<!--            <div class="header-btn-group">-->
+
+
+<!--                <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>-->
+<!--                    <ion-icon name="menu-outline"></ion-icon>-->
+<!--                </button>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="header-bottom">-->
+<!--        <div class="container">-->
+
+<!--            <ul class="social-list">-->
+
+
+<!--            </ul>-->
+
+
+
+<!--КОПИЯ-->
+<!--            <nav class="navbar navbar-expand-lg bg-body-tertiary  fixed-top">-->
+<!--                <div class="container-fluid">-->
+<!--                    <a class="navbar-brand" href="#">Навигационная панель Offcanvas</a>-->
+<!--                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">-->
+<!--                        <span class="navbar-toggler-icon"></span>-->
+<!--                    </button>-->
+<!--                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">-->
+<!--                        <div class="offcanvas-header">-->
+<!--                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>-->
+<!--                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>-->
+<!--                        </div>-->
+<!--                        <div class="offcanvas-body">-->
+<!--                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a class="nav-link active" aria-current="page" href="#">Главная</a>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a class="nav-link" href="#">Ссылка</a>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item dropdown">-->
+<!--                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                                        Выпадающий список-->
+<!--                                    </a>-->
+<!--                                    <ul class="dropdown-menu">-->
+<!--                                        <li><a class="dropdown-item" href="#">Действие</a></li>-->
+<!--                                        <li><a class="dropdown-item" href="#">Другое действие</a></li>-->
+<!--                                        <li>-->
+<!--                                            <hr class="dropdown-divider">-->
+<!--                                        </li>-->
+<!--                                        <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>-->
+<!--                                    </ul>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                            <form class="d-flex mt-3" role="search">-->
+<!--                                <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">-->
+<!--                                <button class="btn btn-outline-success" type="submit">Поиск</button>-->
+<!--                            </form>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </nav>-->
+<!--&lt;!&ndash;            <button class="btn btn-primary">Купить</button>&ndash;&gt;-->
+
+<!--        </div>-->
+<!--    </div>-->
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand" href="index.html">
+                <strong><span>ТУры</span></strong>
+            </a>
+
+            <div class="d-lg-none">
+                <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+
+                <a href="product-detail.html" class="bi-bag custom-icon"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Story</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQs</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-none d-lg-block">
+                    <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+
+                    <a href="product-detail.html" class="bi-bag custom-icon"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+
+
+
+
+
+
 
 
 <main>
@@ -768,7 +874,10 @@
 
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script src="custom.js"></script>
+
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 

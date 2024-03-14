@@ -21,9 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <h2 class="active"> Авторизация </h2>
 
 
-            <div class="fadeIn first">
-                <img src="https://cdn-icons-png.flaticon.com/512/931/931949.png" id="icon" alt="User Icon"/>
-            </div>
+
             <?php $form = ActiveForm::begin([
                 'id' => 'login-form',
             ]); ?>
@@ -41,7 +39,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
                 </div>
             </div>
-
+            <button type="submit" class="btn custom-btn form-control mt-4 mb-3">
+                Sign in
+            </button>
 
             <?php ActiveForm::end(); ?>
             <div id="formFooter">
@@ -52,54 +52,56 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 
 
-    <!--    <div class="offset-lg-1" style="color:#999;">-->
-    <!--        You may login with <strong>admin/admin</strong> or <strong>demo/demo</strong>.<br>-->
-    <!--        To modify the username/password, please check out the code <code>app\models\User::$users</code>.-->
-    <!--    </div>-->
-
 
 </div>
-<!doctype html>
-<html lang="ru" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
-      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BEERMAX</title>
-    <link rel="stylesheet" href="auto_form.css">
-</head>
-<body>
 
 
-<div class="wrapper fadeInDown">
-    <div id="formContent">
 
-        <h2 class="active"> Авторизация </h2>
+<section class="sign-in-form section-padding">
+    <div class="container">
+        <div class="row">
 
+            <div class="col-lg-8 mx-auto col-12">
 
-        <div class="fadeIn first">
-            <img src="https://cdn-icons-png.flaticon.com/512/931/931949.png" id="icon" alt="User Icon"/>
+                <h1 class="hero-title text-center mb-5">Sign In</h1>
+
+                <div class="row">
+                    <div class="col-lg-8 col-11 mx-auto">
+                        <form role="form" method="post">
+
+<!--                            <div class="form-floating mb-4 p-0">-->
+<!--                                <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required>-->
+<!---->
+<!--                                <label for="email">Email address</label>-->
+<!--                            </div>-->
+<!---->
+<!--                            <div class="form-floating p-0">-->
+<!--                                <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>-->
+<!---->
+<!--                                <label for="password">Password</label>-->
+<!--                            </div>-->
+                            <?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>
+
+                            <?= $form->field($model, 'password')->passwordInput(['placeholder'=> 'password']) ?>
+
+                            <?= $form->field($model, 'rememberMe')->checkbox([
+                                'template' => "<div class=\"offset-lg-1 col-lg-3 custom-control custom-checkbox\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
+                            ]) ?>
+
+                            <button type="submit" class="btn custom-btn form-control mt-4 mb-3">
+                                Sign in
+                            </button>
+
+                            <p class="text-center">Don’t have an account? <a href="sign-up.html">Create One</a></p>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-
-        <form method="post">
-            <input type="text" name="username" class="form-control" id="exampleFormControlInput1" placeholder="login">
-            <input type="password" name="password" class="form-control" id="exampleFormControlInput1"
-                   placeholder="password">
-
-            <input type="submit" class="fadeIn fourth" value="Войти">
-            <br>
-            <b style="color: crimson">
-            </b>
-        </form>
-
-
-        <div id="formFooter">
-            <a class="underlineHover" href="register_form.php">Регистрация</a>
-        </div>
-
     </div>
-</div>
-
-
+</section>
 </body>
 </html>
