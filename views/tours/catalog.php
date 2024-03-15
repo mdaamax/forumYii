@@ -1,6 +1,5 @@
 <?php
 var_dump($tours);
-
 ?>
 
 <section class="package" id="package">
@@ -16,73 +15,72 @@ var_dump($tours);
         </p>
 
         <ul class="package-list">
-<?php foreach ($tours as $tour): ?>
-            <li>
-                <div class="package-card">
+            <?php foreach ($tours as $tour): ?>
+                <li>
+                    <div class="package-card">
 
-                    <figure class="card-banner">
-                        <img src="/css/img/packege-1.jpg" alt="Experience The Great Holiday On Beach"
-                             loading="lazy">
-                    </figure>
+                        <figure class="card-banner">
+                            <img src="/css/img/packege-1.jpg" alt="Experience The Great Holiday On Beach"
+                                 loading="lazy">
+                        </figure>
 
-                    <div class="card-content">
+                        <div class="card-content">
 
-                        <h3 class="h3 card-title"><?=$tour -> title?></h3>
+                            <h3 class="h3 card-title"><?= $tour->title ?></h3>
 
-                        <p class="card-text">
-                            <?=$tour -> description?>
-                        </p>
+                            <p class="card-text">
+                                <?= $tour->description ?>
+                            </p>
 
-                        <ul class="card-meta-list">
+                            <ul class="card-meta-list">
 
-                            <li class="card-meta-item">
-                                <div class="meta-box">
-                                    <ion-icon name="time"></ion-icon>
+                                <li class="card-meta-item">
+                                    <div class="meta-box">
+                                        <ion-icon name="time"></ion-icon>
 
-                                    <p class="text">7 дней</p>
-                                </div>
-                            </li>
+                                        <p class="text">7 дней</p>
+                                    </div>
+                                </li>
 
-                            <li class="card-meta-item">
-                                <div class="meta-box">
-                                    <ion-icon name="people"></ion-icon>
+                                <li class="card-meta-item">
+                                    <div class="meta-box">
+                                        <ion-icon name="people"></ion-icon>
 
-                                    <p class="text">человек: <?=$tour -> human_count?></p>
-                                </div>
-                            </li>
+                                        <p class="text">человек: <?= $tour->human_count ?></p>
+                                    </div>
+                                </li>
 
-                            <li class="card-meta-item">
-                                <div class="meta-box">
-                                    <ion-icon name="location"></ion-icon>
+                                <li class="card-meta-item">
+                                    <div class="meta-box">
+                                        <ion-icon name="location"></ion-icon>
 
-                                    <p class="text"><?=$tour -> hotel -> country -> name ?></p>
-                                </div>
-                            </li>
+                                        <p class="text"><?= $tour->hotel->country->name ?></p>
+                                    </div>
+                                </li>
 
-                        </ul>
-
-                    </div>
-
-                    <div class="card-price">
-
-                        <div class="wrapper">
-
-
+                            </ul>
 
                         </div>
 
-                        <p class="price">
-                            <?=$tour -> price?>₽
-                            <span>/ на человека</span>
-                        </p>
+                        <div class="card-price">
 
-                        <button class="btn btn-secondary">Купить</button>
+                            <div class="wrapper">
+
+
+                            </div>
+
+                            <p class="price">
+                                <?= $tour->price ?>₽
+                                <span>/ на человека</span>
+                            </p>
+
+                            <a href="/tour/<?=$tour->id?>" class="btn btn-secondary">Купить</a>
+
+                        </div>
 
                     </div>
-
-                </div>
-            </li>
-<?php endforeach; ?>
+                </li>
+            <?php endforeach; ?>
         </ul>
 
         <button class="btn btn-primary">Все подборки</button>

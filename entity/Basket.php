@@ -61,7 +61,11 @@ class Basket extends \yii\db\ActiveRecord
     {
         return $this->hasMany(BasketToTours::class, ['basket_id' => 'id']);
     }
-
+    public function getTours()
+    {
+        return $this->hasMany(Tours::class, ['id' => 'tour_id'])
+            ->viaTable(BasketToTours::tableName(),['basket_id' => 'id']);
+    }
     /**
      * Gets query for [[User]].
      *

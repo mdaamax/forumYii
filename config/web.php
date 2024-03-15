@@ -48,6 +48,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'tour/<tour_id>'=> 'tours/tour'
             ],
         ],
 
