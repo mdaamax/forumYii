@@ -20,16 +20,21 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
-        'css/auto_form.css',
-        'css/header.css',
-        'css/product_style.css',
+//        'css/site.css',
         'css/top.css',
+        'css/header.css',
+//        'css/top.css',
         'css/auto.css',
+//        'css/top.css',
+        'css/product_style.css',
+        'css/slick.css',
+        'css/popup.css',
+
 //        'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
     ];
     public $js = [
         'css/script.js',
+        'css/popup.js',
         'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js',
         'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js',
         'https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js',
