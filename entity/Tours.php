@@ -13,6 +13,7 @@ use Yii;
  * @property string $title
  * @property string|null $description
  * @property int $hotel_id
+ * @property string $short_description
  *
  * @property BasketToTours[] $basketToTours
  * @property Hotel $hotel
