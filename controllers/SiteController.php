@@ -109,6 +109,7 @@ class SiteController extends Controller
 
     public function actionRegistration(){
         $model = new RegistrationForm();
+
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             $userId = UserRepository::createUser(
                 $model -> email,

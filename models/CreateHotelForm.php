@@ -9,12 +9,15 @@ class CreateHotelForm extends \yii\base\Model
     public $description;
     public $price;
     public $rating;
+    public $main_img;
 
 
     public function rules()
     {
         return [
-            [['name','country_id','description','price','rating'],'required']
+            [['name','country_id','price','main_img','rating'],'required'],
+            [['main_img'], 'file', 'extensions' => 'png, jpg'],
+            ['description','string']
         ];
     }
 }

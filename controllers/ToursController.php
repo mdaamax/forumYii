@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 use app\models\BuyTourForm;
+use app\models\CreateHotelForm;
 use app\models\CreateTourForm;
 use app\repository\BasketRepository;
 use app\repository\CountryRepository;
@@ -84,5 +85,36 @@ class ToursController extends \yii\web\Controller
             'inline' => true,
             'mimeType' => mime_content_type($path)
         ]);
+    }
+
+    public function actionCreateHotel(){
+        $model = new CreateHotelForm();
+        if ($model ->load(\Yii::$app->request->post())){
+            $model->main_img = UploadedFile::getInstance($model, 'main_img');
+            if($model->validate()){
+                $hotel_id = HotelRepository::createHotel(
+                    $model -> name,
+                    $model -> country_id,
+                    $model -> price,
+                    $model -> hotel_id,
+                    $model -> description
+                );
+
+                $alias = \Yii::getAlias("@app/upload/hotels/{$hotel_id}");
+                if (!is_dir($alias)) {
+                    mkdir($alias, 777, true);
+                }
+                array_map("unlink",glob("$alias/*"));
+                $model->main_img->saveAs("{$alias}/main.{$model->main_img->extension}");
+                return $this -> redirect('/');
+            }
+        }
+        $country_entity = CountryRepository::getCountry();
+        $countries = [];
+
+        foreach ($country_entity as $country){
+            $countries[$country -> id]= $country -> name;
+        }
+        return $this -> render('create_hotel',['model'=>$model,'countries'=>$countries]);
     }
 }
