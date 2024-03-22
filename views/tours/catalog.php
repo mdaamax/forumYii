@@ -20,7 +20,7 @@ var_dump($tours);
                     <div class="package-card">
 
                         <figure class="card-banner">
-                            <img src="/css/img/packege-1.jpg" alt="Experience The Great Holiday On Beach"
+                            <img src="/tours/image?path=tours-<?=$tour->id?>-main" alt="Experience The Great Holiday On Beach"
                                  loading="lazy">
                         </figure>
 

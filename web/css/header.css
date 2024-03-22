@@ -553,7 +553,7 @@ body { background: var(--white); }
 
 .package-card .card-text {
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .card-meta-list {
@@ -575,8 +575,8 @@ body { background: var(--white); }
     position: absolute;
     top: 4px;
     right: -1px;
-    bottom: 4px;
-    width: 1px;
+    bottom: 5px;
+    width: 0px;
     background: hsla(0, 0%, 0%, 0.3);
 }
 
@@ -588,6 +588,7 @@ body { background: var(--white); }
     padding-inline: 9px;
     color: var(--black-coral);
     font-size: var(--fs-8);
+    align-items: baseline;
 }
 
 .meta-box > ion-icon {

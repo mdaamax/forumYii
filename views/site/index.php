@@ -364,6 +364,12 @@ $this->title = 'My Yii Application';
         </section>
 
 
+
+
+
+
+
+
         <section class="popular" id="destination">
             <div class="container">
 
