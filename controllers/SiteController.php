@@ -5,6 +5,9 @@ namespace app\controllers;
 use app\entity\Users;
 use app\models\RegistrationForm;
 use app\models\User;
+use app\repository\CountryRepository;
+use app\repository\HotelRepository;
+use app\repository\TourRepository;
 use app\repository\UserRepository;
 use Yii;
 use yii\filters\AccessControl;
@@ -65,7 +68,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $hotel = HotelRepository::getHotels(3);
+        $tours = TourRepository::getTours(3);
+        $country = CountryRepository::getCountry(3);
+
+        return $this->render('index',['hotel'=>$hotel,'tours'=>$tours,'country'=>$country]);
     }
     public function actionLending()
     {

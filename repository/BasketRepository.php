@@ -10,6 +10,21 @@ class BasketRepository
         return Basket::find() -> where(['id'=>$basket_id])->one();
     }
 
+    public static function getHistoryByUserId($user_id){
+        return Basket::find()
+            ->where(['user_id'=>$user_id])
+            ->andWhere(['not',['is','price', null]])
+            ->andWhere(['not',['is','timestamp', null]])
+            ->all();
+    }
+
+    public static function getGlobalHistory(){
+        return Basket::find()
+            ->where(['not',['is','price', null]])
+            ->andWhere(['not',['is','timestamp', null]])
+            ->all();
+    }
+
     public static function getBasket($user_id){
         $basket = Basket::find() -> where(['user_id'=>$user_id,'timestamp'=>null])->one();
         if (empty($basket)){

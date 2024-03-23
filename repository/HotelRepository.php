@@ -6,9 +6,14 @@ use app\entity\Tours;
 
 class HotelRepository extends \yii\web\Controller
 {
-    public static function getHotels(){
-        return Hotel::find()-> all();
+    public static function getHotels($limit = null){
+        return Hotel::find()->limit($limit)-> all();
     }
+
+    public static function getHotelsByCountry($country_id){
+        return Hotel::find()->where(['country_id' => $country_id])-> all();
+    }
+
     public static function getHotelById($hotel_id){
         return Hotel::find() -> where(['id'=> $hotel_id])->one();
     }

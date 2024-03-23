@@ -3,10 +3,13 @@
 namespace app\controllers;
 
 use app\entity\DirCountries;
+use app\models\CountryImagesEditForm;
+use app\models\CountryImagesForm;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * CountriesController implements the CRUD actions for DirCountries model.
@@ -51,7 +54,6 @@ class CountriesController extends Controller
             ],
             */
         ]);
-
         return $this->render('index', [
             'dataProvider' => $dataProvider,
         ]);
@@ -78,17 +80,29 @@ class CountriesController extends Controller
     public function actionCreate()
     {
         $model = new DirCountries();
-
+        $model_file = new CountryImagesForm();
         if ($this->request->isPost) {
-            if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
+            $model_file->slider_images = UploadedFile::getInstances($model_file, 'slider_images');
+            if ($model_file->validate()) {
+                if ($model->load($this->request->post()) && $model->save()) {
+                    $alias = \Yii::getAlias("@app/upload/country/{$model->id}");
+                    if (!is_dir($alias)) {
+                        mkdir($alias, 777, true);
+                    }
+                    array_map("unlink", glob("$alias/*"));
+                    foreach ($model_file->slider_images as $index => $image) {
+                        $num = $index + 1;
+                        $image->saveAs("{$alias}/{$num}.{$image->extension}");
+                    }
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
             }
         } else {
             $model->loadDefaultValues();
         }
-
         return $this->render('create', [
             'model' => $model,
+            'model_file' => $model_file
         ]);
     }
 
@@ -102,13 +116,29 @@ class CountriesController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
-        if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        $model_file = new CountryImagesEditForm();
+        if ($model_file->load(\Yii::$app->request->post())) {
+            $model_file->slider_images = UploadedFile::getInstances($model_file, 'slider_images');
+            if ($model_file->validate()) {
+                if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
+                    if ($model_file->updateImg) {
+                        $alias = \Yii::getAlias("@app/upload/country/{$model->id}");
+                        if (!is_dir($alias)) {
+                            mkdir($alias, 777, true);
+                        }
+                        array_map("unlink", glob("$alias/*"));
+                        foreach ($model_file->slider_images as $index => $image) {
+                            $num = $index + 1;
+                            $image->saveAs("{$alias}/{$num}.{$image->extension}");
+                        }
+                    }
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
+            }
         }
-
         return $this->render('update', [
             'model' => $model,
+            'model_file' => $model_file
         ]);
     }
 
@@ -122,7 +152,6 @@ class CountriesController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
-
         return $this->redirect(['index']);
     }
 
@@ -138,7 +167,6 @@ class CountriesController extends Controller
         if (($model = DirCountries::findOne(['id' => $id])) !== null) {
             return $model;
         }
-
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 }

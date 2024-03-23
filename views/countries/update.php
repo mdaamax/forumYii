@@ -16,6 +16,8 @@ $this->params['breadcrumbs'][] = 'Update';
 
     <?= $this->render('_form', [
         'model' => $model,
+        'model_file' => $model_file,
+        'isEdit'=>true
     ]) ?>
 
 </div>

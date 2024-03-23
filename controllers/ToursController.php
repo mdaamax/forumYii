@@ -20,6 +20,21 @@ class ToursController extends \yii\web\Controller
         $country = CountryRepository::getCountry();
         return $this -> render('country',['country'=>$country]);
     }
+    public function actionHotels(){
+        $hotels = HotelRepository::getHotels();
+        return $this -> render('hotels',['hotels'=>$hotels]);
+    }
+
+    public function actionCountryHotels($country_id){
+        $hotels = HotelRepository::getHotelsByCountry($country_id);
+        return $this -> render('hotels',['hotels'=>$hotels]);
+    }
+
+    public function actionHotelTours($hotel_id){
+        $tours = TourRepository::getToursByHotel($hotel_id);
+        return $this -> render('catalog',['tours'=>$tours]);
+    }
+
     public function actionTour(int $tour_id){
         $tour = TourRepository::getTourById($tour_id);
         $model = new BuyTourForm();
@@ -29,7 +44,7 @@ class ToursController extends \yii\web\Controller
                 $basket->id,
                 $tour_id,
                 $model->count,
-                $model->count*$tour->price
+                ($model->count*$tour->price)+$tour->hotel->price
             );
             return $this -> redirect('/basket');
         }

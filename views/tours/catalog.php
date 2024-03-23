@@ -1,5 +1,4 @@
 <?php
-var_dump($tours);
 ?>
 
 <section class="package" id="package">
@@ -29,18 +28,10 @@ var_dump($tours);
                             <h3 class="h3 card-title"><?= $tour->title ?></h3>
 
                             <p class="card-text">
-                                <?= $tour->description ?>
+                                <?= $tour->short_description ?>
                             </p>
 
                             <ul class="card-meta-list">
-
-                                <li class="card-meta-item">
-                                    <div class="meta-box">
-                                        <ion-icon name="time"></ion-icon>
-
-                                        <p class="text">7 дней</p>
-                                    </div>
-                                </li>
 
                                 <li class="card-meta-item">
                                     <div class="meta-box">
@@ -64,17 +55,12 @@ var_dump($tours);
 
                         <div class="card-price">
 
-                            <div class="wrapper">
-
-
-                            </div>
-
                             <p class="price">
                                 <?= $tour->price ?>₽
                                 <span>/ на человека</span>
                             </p>
 
-                            <a href="/tour/<?=$tour->id?>" class="btn btn-secondary">Купить</a>
+                            <a href="/tour/<?=$tour->id?>" class="btn btn-secondary">Подробнее</a>
 
                         </div>
 
@@ -82,8 +68,6 @@ var_dump($tours);
                 </li>
             <?php endforeach; ?>
         </ul>
-
-        <button class="btn btn-primary">Все подборки</button>
 
     </div>
 </section>

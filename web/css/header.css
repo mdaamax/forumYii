@@ -536,6 +536,7 @@ body { background: var(--white); }
 .package-card {
     background: var(--cultured);
     overflow: hidden;
+
     border-radius: 15px;
 }
 
@@ -1070,6 +1071,7 @@ address {
 
     .package-card {
         display: grid;
+        grid-template-rows: 350px;
         grid-template-columns: 1.3fr 1.5fr 1fr;
     }
 
@@ -1082,7 +1084,10 @@ address {
         place-content: center;
     }
 
-    .package-card .card-price .wrapper { margin-bottom: 15px; }
+    .package-card .card-price .wrapper {
+        margin-bottom: 15px;
+        height: max-content;
+    }
 
 
 

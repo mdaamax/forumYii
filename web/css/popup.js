@@ -1,24 +1,23 @@
-let popupBg = document.querySelector('.popup__bg');
-let popup = document.querySelector('.popup');
+let popupBg = document.querySelectorAll('.popup__bg');
+let popup = document.querySelectorAll('.popup');
 let openPopupButtons = document.querySelectorAll('.open-popup');
 let closePopupButton = document.querySelector('.close-popup');
 
 openPopupButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
         e.preventDefault();
-        popupBg.classList.add('active');
-        popup.classList.add('active');
+        let id = $(button).attr('data-open');
+        $('#'+id).addClass('active')
+        $(`#${id} > form`).addClass('active')
     })
 });
 
 closePopupButton.addEventListener('click',() => {
-    popupBg.classList.remove('active');
-    popup.classList.remove('active');
+    $('.popup__bg.active').removeClass('active')
+    $('.popup.active').removeClass('active')
 });
 
-document.addEventListener('click', (e) => {
-    if(e.target === popupBg) {
-        popupBg.classList.remove('active');
-        popup.classList.remove('active');
-    }
+$('.popup__bg').click((e) => {
+    $('.popup__bg.active').removeClass('active')
+    $('.popup.active').removeClass('active')
 });

@@ -5,8 +5,12 @@ use app\entity\Tours;
 
 class TourRepository extends \yii\web\Controller
 {
-    public static function getTours(){
-        return Tours::find()-> all();
+    public static function getTours($limit=null){
+        return Tours::find()->limit($limit)-> all();
+    }
+
+    public static function getToursByHotel($hotel_id){
+        return Tours::find()->where(['hotel_id'=> $hotel_id])-> all();
     }
     public static function getTourById($tour_id){
         return Tours::find() -> where(['id'=> $tour_id])->one();
