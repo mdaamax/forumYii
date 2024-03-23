@@ -44,7 +44,7 @@ $this->title = 'My Yii Application';
                     <div class="popular-card">
 
                         <figure class="card-img">
-                            <?= Html::img("/tours/image?path=country-{$one_country->id}-1") ?>
+                            <?= Html::img("/tours/image?path=country-{$one_country->id}-main") ?>
                         </figure>
 
                         <div class="card-content">
@@ -146,8 +146,7 @@ $this->title = 'My Yii Application';
                             <?= $tour->price ?> ₽
                             <span>/ на человека</span>
                         </p>
-
-                        <button class="btn btn-secondary">Подробнее</button>
+                        <a href="/tour/<?=$tour->id?>" class="btn btn-secondary">Подробнее</a>
 
                     </div>
 

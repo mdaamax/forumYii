@@ -27,7 +27,6 @@ AppAsset::register($this);
 
 <?php
 $items = [
-    ['label' => 'Главная', 'url' => ['/site/index']],
     ['label' => 'О нас', 'url' => ['/site/about']],
     ['label' => 'Контакты', 'url' => ['/site/contact']],
 ];
@@ -35,6 +34,16 @@ if (Yii::$app->user->isGuest) {
     $items[] = ['label' => 'Авторизация', 'url' => ['/site/login']];
     $items[] = ['label' => 'Регистрация', 'url' => ['/site/registration']];
 } else {
+    if (Yii::$app->user->can('admin')){
+        $items[] = ['label' => 'Панель пдминистратора', 'items' => [
+            ['label' => 'Создать тур', 'url' => ['/tours/create-tour']],
+            ['label' => 'Создать отели', 'url' => ['/tours/create-hotel']],
+            ['label' => 'Настройка странн', 'url' => ['/countries']],
+            ['label' => 'Глобальная история', 'url' => ['/basket/global-history']],
+        ]];
+    }
+    $items[] = ['label' => 'История', 'url' => ['/basket/history']];
+    $items[] = ['label' => 'Корзина', 'url' => ['/basket']];
     $items[] = '<li class = "nav-item">'
         . HTml::beginForm(['/site/logout'])
         . Html::submitButton(
@@ -58,7 +67,7 @@ $nav = Nav::widget([
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <a class="navbar-brand" href="">
+            <a class="navbar-brand" href="/">
                 <strong><span>ТУры</span></strong>
             </a>
 

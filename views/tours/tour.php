@@ -5,10 +5,10 @@ use yii\bootstrap4\Html;
 use yii\widgets\ActiveForm;
 
 TourAsset::register($this);
-$aliasTours = \Yii::getAlias("@app/upload/tours/{$tour->id}/slider");
+$aliasTours = \Yii::getAlias("@app/upload/tours/{$tour->id}");
 $aliasCountry = \Yii::getAlias("@app/upload/country/{$tour->hotel->country->id}");
-$countTours = count(glob("$aliasTours/*"));
-$countCountry = count(glob("$aliasCountry/*"));
+$countTours = count(glob("$aliasTours/slider/*"));
+$countCountry = count(glob("$aliasCountry/slider/*"));
 $dropDownList = [];
 foreach (range(1,$tour->human_count) as $item ){
     $dropDownList[$item]=$item;
@@ -27,7 +27,7 @@ foreach (range(1,$tour->human_count) as $item ){
         <div class="carousel-inner">
             <?php for($i = 0; $i < $countCountry; $i++): ?>
             <div class="carousel-item <?=($i==0)?'active':''?>">
-                <img src="/tours/image?path=country-<?=$tour->hotel->country->id?>-<?=$i+1?>"
+                <img src="/tours/image?path=country-<?=$tour->hotel->country->id?>-slider-<?=$i+1?>"
                      class="d-block w-100" alt="...">
             </div>
             <?php endfor;?>

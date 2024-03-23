@@ -13,7 +13,7 @@ use yii\widgets\ActiveForm;
 <br>
 <br>
 
-<div class="tours-create_tour container">
+<div class="tours-create_tour container" style="margin-top: 10vh">
 
     <?php $form = ActiveForm::begin(); ?>
 

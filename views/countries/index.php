@@ -12,7 +12,7 @@ use yii\grid\GridView;
 $this->title = 'Dir Countries';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="dir-countries-index">
+<div class="dir-countries-index container" style="margin-top: 10vh">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

@@ -7,7 +7,7 @@ use yii\widgets\ActiveForm;
 /** @var app\models\CreateHotelForm $model */
 /** @var ActiveForm $form */
 ?>
-<div class="tours-create_hotel">
+<div class="tours-create_hotel container" style="margin-top: 10vh">
 
     <?php $form = ActiveForm::begin(); ?>
 

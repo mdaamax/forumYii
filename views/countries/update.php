@@ -10,7 +10,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Dir Countries', 'url' => ['index']
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="dir-countries-update">
+<div class="dir-countries-update container" style="margin-top: 10vh">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

@@ -82,6 +82,7 @@ class CountriesController extends Controller
         $model = new DirCountries();
         $model_file = new CountryImagesForm();
         if ($this->request->isPost) {
+            $model_file->main_image = UploadedFile::getInstance($model_file, 'main_image');
             $model_file->slider_images = UploadedFile::getInstances($model_file, 'slider_images');
             if ($model_file->validate()) {
                 if ($model->load($this->request->post()) && $model->save()) {
@@ -89,10 +90,14 @@ class CountriesController extends Controller
                     if (!is_dir($alias)) {
                         mkdir($alias, 777, true);
                     }
+                    array_map("unlink", glob("$alias/slider/*"));
+                    rmdir("{$alias}/slider");
                     array_map("unlink", glob("$alias/*"));
+                    mkdir("{$alias}/slider", 777, true);
+                    $model_file->main_image->saveAs("{$alias}/main.{$model_file->main_image->extension}");
                     foreach ($model_file->slider_images as $index => $image) {
                         $num = $index + 1;
-                        $image->saveAs("{$alias}/{$num}.{$image->extension}");
+                        $image->saveAs("{$alias}/slider/{$num}.{$image->extension}");
                     }
                     return $this->redirect(['view', 'id' => $model->id]);
                 }
@@ -119,6 +124,7 @@ class CountriesController extends Controller
         $model_file = new CountryImagesEditForm();
         if ($model_file->load(\Yii::$app->request->post())) {
             $model_file->slider_images = UploadedFile::getInstances($model_file, 'slider_images');
+            $model_file->main_image = UploadedFile::getInstance($model_file, 'main_image');
             if ($model_file->validate()) {
                 if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
                     if ($model_file->updateImg) {
@@ -126,10 +132,14 @@ class CountriesController extends Controller
                         if (!is_dir($alias)) {
                             mkdir($alias, 777, true);
                         }
+                        array_map("unlink", glob("$alias/slider/*"));
+                        rmdir("{$alias}/slider");
                         array_map("unlink", glob("$alias/*"));
+                        mkdir("{$alias}/slider", 777, true);
+                        $model_file->main_image->saveAs("{$alias}/main.{$model_file->main_image->extension}");
                         foreach ($model_file->slider_images as $index => $image) {
                             $num = $index + 1;
-                            $image->saveAs("{$alias}/{$num}.{$image->extension}");
+                            $image->saveAs("{$alias}/slider/{$num}.{$image->extension}");
                         }
                     }
                     return $this->redirect(['view', 'id' => $model->id]);

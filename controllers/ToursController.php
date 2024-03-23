@@ -70,15 +70,16 @@ class ToursController extends \yii\web\Controller
                 if (!is_dir($alias)) {
                     mkdir($alias, 777, true);
                 }
-                array_map("unlink",glob("$alias/*"));
-                $model->main_img->saveAs("{$alias}/main.{$model->main_img->extension}");
+                array_map("unlink", glob("$alias/slider/*"));
+                rmdir("{$alias}/slider");
+                array_map("unlink", glob("$alias/*"));
                 mkdir("{$alias}/slider", 777, true);
+                $model->main_img->saveAs("{$alias}/main.{$model->main_img->extension}");
                 foreach ($model->slider_images as $index=>$image){
                     $num = $index + 1;
                     $image->saveAs("{$alias}/slider/{$num}.{$image->extension}");
                 }
-
-                return $this -> redirect('/');
+                return $this -> redirect('/tours/catalog');
             }
         }
         $hotels_entity = HotelRepository::getHotels();
@@ -111,7 +112,7 @@ class ToursController extends \yii\web\Controller
                     $model -> name,
                     $model -> country_id,
                     $model -> price,
-                    $model -> hotel_id,
+                    $model -> rating,
                     $model -> description
                 );
 
@@ -121,7 +122,7 @@ class ToursController extends \yii\web\Controller
                 }
                 array_map("unlink",glob("$alias/*"));
                 $model->main_img->saveAs("{$alias}/main.{$model->main_img->extension}");
-                return $this -> redirect('/');
+                return $this -> redirect('/tours/hotels');
             }
         }
         $country_entity = CountryRepository::getCountry();
