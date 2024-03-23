@@ -70,6 +70,9 @@ class ToursController extends \yii\web\Controller
                 if (!is_dir($alias)) {
                     mkdir($alias, 777, true);
                 }
+                if (!is_dir("{$alias}/slider")){
+                    mkdir("{$alias}/slider", 777, true);
+                }
                 array_map("unlink", glob("$alias/slider/*"));
                 rmdir("{$alias}/slider");
                 array_map("unlink", glob("$alias/*"));
