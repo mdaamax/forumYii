@@ -35,7 +35,7 @@ if (Yii::$app->user->isGuest) {
     $items[] = ['label' => 'Регистрация', 'url' => ['/site/registration']];
 } else {
     if (Yii::$app->user->can('admin')){
-        $items[] = ['label' => 'Панель пдминистратора', 'items' => [
+        $items[] = ['label' => 'Панель Администратора', 'items' => [
             ['label' => 'Создать тур', 'url' => ['/tours/create-tour']],
             ['label' => 'Создать отели', 'url' => ['/tours/create-hotel']],
             ['label' => 'Настройка странн', 'url' => ['/countries']],
@@ -68,7 +68,7 @@ $nav = Nav::widget([
             </button>
 
             <a class="navbar-brand" href="/">
-                <strong><span>ТУры</span></strong>
+                <strong><span>Valim</span></strong>
             </a>
 
             <div class="d-lg-none">

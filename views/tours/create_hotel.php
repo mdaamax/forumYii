@@ -7,7 +7,7 @@ use yii\widgets\ActiveForm;
 /** @var app\models\CreateHotelForm $model */
 /** @var ActiveForm $form */
 ?>
-<div class="tours-create_hotel container" style="margin-top: 10vh">
+<div class="tours-create_hotel container" style="margin-top: 16vh">
 
     <?php $form = ActiveForm::begin(); ?>
 
@@ -19,7 +19,7 @@ use yii\widgets\ActiveForm;
         <?= $form->field($model, 'description') ?>
     
         <div class="form-group">
-            <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
+            <?= Html::submitButton('Создать', ['class' => 'btn btn-primary']) ?>
         </div>
     <?php ActiveForm::end(); ?>
 

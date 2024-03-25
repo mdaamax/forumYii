@@ -23,7 +23,7 @@ use yii\bootstrap4\Html;
                     <div class="popular-card">
 
                         <figure class="card-img">
-                            <?= Html::img("/tours/image?path=country-{$one_country->id}-1") ?>
+                            <?= Html::img("/tours/image?path=country-{$one_country->id}-main") ?>
                         </figure>
 
                         <div class="card-content">

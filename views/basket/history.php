@@ -1,6 +1,7 @@
 <?php
+/** @var string $baskets */
 ?>
-<div class="container" style="margin-top: 10vh">
+<div class="container" style="margin-top: 15vh;margin-bottom: 130px"  >
     <h1>История</h1>
     <table class="table">
         <thead>

@@ -1,7 +1,7 @@
 <?php
 $resultPrice = 0;
 ?>
-<div class="container" style="margin-top: 10vh">
+<div class="container" style="margin-top: 15vh;margin-bottom: 100px">
     <h1>Корзина</h1>
     <table class="table">
         <thead>
