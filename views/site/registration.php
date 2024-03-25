@@ -13,7 +13,7 @@ use yii\bootstrap4\Html;
 
             <div class="col-lg-8 mx-auto col-12">
 
-                <h1 class="hero-title text-center mb-5">Sign In</h1>
+                <h1 class="hero-title text-center mb-5">Регистрация</h1>
 
                 <div class="row">
                     <div class="col-lg-8 col-11 mx-auto">
@@ -47,7 +47,7 @@ use yii\bootstrap4\Html;
                         </div>
 
 
-                        <?= Html::submitButton('Зарегистривроваться', ['class' => 'btn custom-btn w-100 mt-4 mb-3', 'name' => 'login-button']) ?>
+                        <?= Html::submitButton('Зарегистрироваться', ['class' => 'btn custom-btn w-100 mt-4 mb-3', 'name' => 'login-button']) ?>
                         <?php ActiveForm::end(); ?>
 
                     </div>

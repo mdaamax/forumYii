@@ -27,8 +27,8 @@ AppAsset::register($this);
 
 <?php
 $items = [
-    ['label' => 'О нас', 'url' => ['/site/about']],
-    ['label' => 'Контакты', 'url' => ['/site/contact']],
+    ['label' => 'Страны', 'url' => ['/tours/country']],
+    ['label' => 'Туры', 'url' => ['/tours/catalog']],
 ];
 if (Yii::$app->user->isGuest) {
     $items[] = ['label' => 'Авторизация', 'url' => ['/site/login']];
@@ -62,7 +62,7 @@ $nav = Nav::widget([
 <header class="header" data-header>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <button class="navbar-toggler" style="padding-left: 15px" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -194,7 +194,8 @@ $nav = Nav::widget([
             <div class="footer-brand">
 
                 <a href="#" class="logo">
-                    <img src="/web/css/img/logo.svg" alt="Tourly logo">
+<!--                    <img src="/web/css/img/logo.svg" alt="">-->
+                    <h3 style="color: white">Valim</h3>
                 </a>
 
                 <p class="footer-text">
@@ -238,18 +239,12 @@ $nav = Nav::widget([
 
             </div>
 
-            <div class="footer-form">
-
-                <p class="form-text">
-                    Подпишитесь на нашу рассылку для получения дополнительных обновлений и новостей!!
-                </p>
+            <div class="footer-form" style="height: 150px;width: 150px;margin-left: 90px">
 
                 <form action="" class="form-wrapper">
-                    <input type="email" name="email" class="input-field" placeholder="Enter Your Email" required>
+                    <?= Html::img('@web/css/img/2024032523035.png') ?>
 
-                    <button type="submit" class="btn btn-secondary">Subscribe</button>
                 </form>
-
             </div>
 
         </div>

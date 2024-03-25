@@ -47,7 +47,7 @@ foreach (range(1,$tour->human_count) as $item ){
 
     <div class="container marketing">
         <li>
-            <div class="package-card" style="height: 500px;">
+            <div class="package-card" style="height: 450px;">
 
                 <figure class="card-banner">
                     <img src="/tours/image?path=tours-<?=$tour->id?>-main" alt="Santorini Island's Weekend Vacation"
@@ -144,25 +144,6 @@ foreach (range(1,$tour->human_count) as $item ){
                 <?php endfor; ?>
             </ul>
 
-            <div class="popup__bg">
-                <form class="popup">
-                    <svg class="close-popup" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                         viewBox="0 0 24 24">
-                        <path fill="#2982ff"
-                              d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
-                    </svg>
-                    <label>
-                        <p> Текст-рыба
-                            Значимость этих проблем настолько очевидна, что новая модель организационной деятельности
-                            позволяет оценить значение модели развития. Значимость этих проблем настолько очевидна, что
-                            новая модель организационной деятельности играет важную роль в формировании направлений
-                            прогрессивного развития. Разнообразный и богатый опыт постоянное
-                            информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение
-                            позиций, занимаемых участниками в отношении поставленных задач.
-                    </label>
-
-                </form>
-            </div>
         </div>
     </section>
 

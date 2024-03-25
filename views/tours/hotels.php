@@ -7,17 +7,15 @@ use yii\bootstrap4\Html;
 <section class="popular" id="destination">
     <div class="container">
 
-        <p class="section-subtitle">Uncover place</p>
+        <p class="section-subtitle">Популярные подборки</p>
 
         <h2 class="h2 section-title">ОТЕли</h2>
         <?php if (Yii::$app->user->can('admin')): ?>
             <a href="/tours/create-hotel">Добавить отель</a>
         <?php endif; ?>
         <p class="section-text">
-            Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque
-            laudantium.
-            Sit ornare
-            mollitia tenetur, aptent.
+            Каждый номер – это идеальный выбор без всяких компромиссов. Утонченная эстетика и отделка натуральными материалами,
+            продуманная до мелочей концепция пространства.
         </p>
 
         <ul class="popular-list">
@@ -40,7 +38,7 @@ use yii\bootstrap4\Html;
                                 <a href="/tours/hotel-tours?hotel_id=<?= $one_hotel->id ?>"><?= $one_hotel->name ?></a>
                             </h3>
 
-                            <p class="card-text"><?= $one_hotel->rating ?></p>
+                            <p class="card-text">Рейтинг:<?= $one_hotel->rating ?>/5</p>
 
                             <p class="card-text open-popup" data-open="hotel<?= $one_hotel->id ?>">
                                 <a href="#">Подробнее</a>

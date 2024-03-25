@@ -3,7 +3,7 @@
 
 use yii\bootstrap4\Html;
 
-$this->title = 'My Yii Application';
+$this->title = 'Valim';
 ?>
 
 <section class="hero" id="home">
@@ -16,9 +16,8 @@ $this->title = 'My Yii Application';
         </p>
 
         <div class="btn-group">
-            <button class="btn btn-primary">Learn more</button>
-
-            <button class="btn btn-secondary">Book now</button>
+            <a href="/tours/country" class="btn btn-primary" style="font-size: 16px"><strong>Страны</strong></a>
+            <a href="/tours/catalog" class="btn btn-secondary" style="font-size: 16px"><strong>Туры</strong></a>
         </div>
 
     </div>
@@ -32,10 +31,7 @@ $this->title = 'My Yii Application';
         <h2 class="h2 section-title">СТРАНЫ</h2>
 
         <p class="section-text">
-            Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque
-            laudantium.
-            Sit ornare
-            mollitia tenetur, aptent.
+            Мы тщательно следим за открытием границ и подбираем проверенные варианты
         </p>
 
         <ul class="popular-list">
@@ -79,7 +75,7 @@ $this->title = 'My Yii Application';
             <?php endforeach; ?>
         </ul>
         <div class="row justify-content-center">
-            <a href="/tours/country" class="btn btn-primary">Наши туры</a>
+            <a href="/tours/country" class="btn btn-primary">Страны Партнеры</a>
         </div>
 
     </div>
@@ -98,8 +94,8 @@ $this->title = 'My Yii Application';
         <h2 class="h2 section-title">ТУРЫ</h2>
 
         <p class="section-text">
-            Это настоящий круиз на парусной яхте с максимально разнообразной программой:
-            яхтинг и чил, трекинг, катание на сапах, много игрушек на борту (гамаки, квадрокоптер и прочее)
+            Небольшие группы.
+            Особенная атмосфера в компании единомышленников
         </p>
 
         <ul class="package-list">
@@ -166,15 +162,13 @@ $this->title = 'My Yii Application';
 <section class="popular" id="destination">
     <div class="container">
 
-        <p class="section-subtitle">Uncover place</p>
+        <p class="section-subtitle">Популярные подборки</p>
 
         <h2 class="h2 section-title">ОТЕли</h2>
 
         <p class="section-text">
-            Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque
-            laudantium.
-            Sit ornare
-            mollitia tenetur, aptent.
+            Каждый номер – это идеальный выбор без всяких компромиссов.
+            Утонченная эстетика и отделка натуральными материалами, продуманная до мелочей концепция пространства.
         </p>
 
         <ul class="popular-list">
@@ -222,7 +216,7 @@ $this->title = 'My Yii Application';
         </ul>
 
         <div class="row justify-content-center">
-            <a href="/tours/hotels" class="btn btn-primary">Наши туры</a>
+            <a href="/tours/hotels" class="btn btn-primary">Наши отели</a>
         </div>
         <div class="popup__bg">
             <form class="popup">

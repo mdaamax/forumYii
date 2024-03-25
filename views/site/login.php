@@ -21,7 +21,7 @@ $this->title = 'Login';
 
             <div class="col-lg-8 mx-auto col-12">
 
-                <h1 class="hero-title text-center mb-5">Sign In</h1>
+                <h1 class="hero-title text-center mb-5">Авторизация</h1>
 
                 <div class="row">
                     <div class="col-lg-8 col-11 mx-auto">
@@ -48,11 +48,12 @@ $this->title = 'Login';
 <!--                            <button type="submit" class="btn custom-btn form-control mt-4 mb-3">-->
 <!--                                Sign in-->
 <!--                            </button>-->
-                                <?= Html::submitButton('Sign in', ['class' => 'btn custom-btn w-100 mt-4 mb-3', 'name' => 'login-button']) ?>
+                                <?= Html::submitButton('ВХОД', ['class' => 'btn custom-btn w-100 mt-4 mb-3', 'name' => 'login-button']) ?>
                             <?= $form->field($model, 'rememberMe')->checkbox([
                                 'template' => "<div class=\"offset-lg-1  custom-control custom-checkbox\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
                             ]) ?>
-                            <p class="text-center">Don’t have an account? <a href="sign-up.html">Create One</a></p>
+                            <p class="text-center">У вас нет учетной записи? <a href="/site/registration">Создать аккаунт</a></p>
+                        <a href="/site/index"><small>на главную</small></a></p>
                             <?php ActiveForm::end(); ?>
 
                     </div>
