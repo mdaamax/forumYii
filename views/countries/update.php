@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var app\entity\DirCountries $model */
 
-$this->title = 'Update Dir Countries: ' . $model->name;
+$this->title = 'Изменить страну: ' . $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Dir Countries', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';

@@ -47,7 +47,7 @@ foreach (range(1,$tour->human_count) as $item ){
 
     <div class="container marketing">
         <li>
-            <div class="package-card" style="height: 450px;">
+            <div class="package-card">
 
                 <figure class="card-banner">
                     <img src="/tours/image?path=tours-<?=$tour->id?>-main" alt="Santorini Island's Weekend Vacation"
@@ -104,16 +104,26 @@ foreach (range(1,$tour->human_count) as $item ){
     </div>
 
 
+    <hr class="featurette-divider">
+    <div class="row featurette container" >
+<!--        <div class="col-md-7 order-md-2">-->
+        <div class="col-md-9 order-md-2"">
+            <h5 class="featurette-heading" ><?=$tour->title?> </h5>
+            <p class="lead" > <?=$tour->description?> </p>
+        </div>
+    </div>
+
+
         <!-- START THE FEATURETTES -->
 
         <hr class="featurette-divider">
     <div class="container">
         <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading"><?=$tour->hotel->name?></h2>
+                <h2 class="featurette-heading">Отель: <?=$tour->hotel->name?></h2>
                 <p class="lead"><?=$tour->hotel->description?></p>
-                <p class="lead"><?=$tour->hotel->rating?></p>
-                <p class="lead"><?=$tour->hotel->price?></p>
+                <p class="lead"style="margin-left: 150px">Рейтинг <?=$tour->hotel->rating?>/5</p>
+                <p class="lead"style="margin-left: 150px">Цена:<?=$tour->hotel->price?></p>
             </div>
             <div class="col-md-5">
                 <img src="/tours/image?path=hotels-<?=$tour->hotel->id?>-main" width="400" height="400">

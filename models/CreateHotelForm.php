@@ -16,7 +16,7 @@ class CreateHotelForm extends \yii\base\Model
     {
         return [
             [['name','country_id','price','main_img','rating'],'required'],
-            [['main_img'], 'file', 'extensions' => 'png, jpg'],
+            [['main_img'], 'file', 'extensions' => 'png, jpg, jpeg'],
             ['description','string']
         ];
     }

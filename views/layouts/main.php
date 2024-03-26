@@ -209,10 +209,10 @@ $nav = Nav::widget([
 
             <div class="footer-contact">
 
-                <h4 class="contact-title">Contact Us</h4>
+                <h4 class="contact-title">Контакты</h4>
 
                 <p class="contact-text">
-                    Feel free to contact and reach us !!
+                    Не стесняйтесь обращаться к нам!!
                 </p>
 
                 <ul>
@@ -220,19 +220,19 @@ $nav = Nav::widget([
                     <li class="contact-item">
                         <ion-icon name="call-outline"></ion-icon>
 
-                        <a href="tel:+01123456790" class="contact-link">+01 (123) 4567 90</a>
+                        <a href="tel:+01123456790" class="contact-link">8(800)555-35-35</a>
                     </li>
 
                     <li class="contact-item">
                         <ion-icon name="mail-outline"></ion-icon>
 
-                        <a href="mailto:info.tourly.com" class="contact-link">info.tourly.com</a>
+                        <a href="mailto:info.tourly.com" class="contact-link">mgagaga@mail.ru</a>
                     </li>
 
                     <li class="contact-item">
                         <ion-icon name="location-outline"></ion-icon>
 
-                        <address>3146 Koontz, California</address>
+                        <address>Астрахань</address>
                     </li>
 
                 </ul>

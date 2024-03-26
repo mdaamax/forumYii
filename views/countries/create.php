@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /** @var app\entity\DirCountries $model */
 /** @var $model_file */
 
-$this->title = 'Create Dir Countries';
+$this->title = 'Создание страны';
 $this->params['breadcrumbs'][] = ['label' => 'Dir Countries', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

@@ -9,7 +9,7 @@ use yii\grid\GridView;
 /** @var yii\web\View $this */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Dir Countries';
+$this->title = 'Страны';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="dir-countries-index container" style="margin-top: 10vh">
@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Dir Countries', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать страну', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
 
