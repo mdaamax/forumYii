@@ -192,7 +192,7 @@ $this->title = 'Valim';
                             <a href="/tours/hotel-tours?hotel_id=<?=$one_hotel->id?>"><?=$one_hotel->name?></a>
                         </h3>
 
-                        <p class="card-text"><?=$one_hotel->rating?></p>
+                        <p class="card-text">Рейтинг: <?=$one_hotel->rating?>/5</p>
 
                         <p class="card-text open-popup" data-open="hotel<?=$one_hotel->id?>">
                             <a href="#">Подробнее</a>
